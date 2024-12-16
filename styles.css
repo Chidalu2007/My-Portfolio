@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
     font-size: 15px;
     line-height: 30px;
     word-wrap: break-word;
     font-weight: 400;
     vertical-align: baseline;
+    color: #767676;
 }
 .nav-bar{
     display: none;
@@ -73,6 +73,153 @@ body{
 .menu-content .nav-content ul li a{
     color: black;
 } */
+ #home{
+    display: flex;
+    background-color: #302a2a;
+    align-items: center;
+    /* width: 100vw; */
+    justify-content: center;
+    height:100vh;
+    line-height: 40px;
+}
+#home img{
+    /* width: 100vw; */
+    overflow: hidden;
+
+}
+#home .text{
+    color: white;
+    text-wrap:nowrap;
+    animation: animate 3s ease-in-out 2s  1 forwards;
+}
+#home .text h1{
+    font-size: 50px;
+}
+#home .text h1 marquee{
+    font-size: 20px;
+    font-style: italic;
+    color: #767676;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+#about img{
+    border-radius: 10px;
+}
+#about .abt-text h2{
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#about .abt-text p{
+    color: #767676;
+    padding-bottom: 30px;
+}
+#about .abt-text h2 span{
+    color: red;
+}
+#about .abt-text ul li{
+    color: #000;
+    list-style-type: square;
+    padding-bottom: 30px;
+}
+#about .abt-text button{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #e54b4b;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: none;
+}
+#about .abt-text button:hover{
+    background-color: #fff;
+    border: 2px solid #e54b4b;
+    color: #767676;
+    cursor: pointer;
+}
+#projects{
+    /* margin: 20px 50px; */
+    background-color: rgb(249, 246, 246);
+}
+#projects h2{
+    color: #000;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    padding-top: 30px;
+    /* text-wrap: nowrap; */
+}
+#projects span{
+    color: red;
+}
+#projects .project-links{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 90px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+}
+a:hover{
+    color: black;
+}
+#projects .project-links #box1,#box2,#box3,#box4,#box5,#box6{
+    width: 320px;
+    height: 320px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.project-links #box-margin{
+    margin-top: 90px;
+
+}
+
+#box1{
+    background-color: pink;
+}
+#box2{
+    background-color: cyan;
+}
+#box3{
+    background-color: rgb(30, 197, 239);
+}
+#box4{
+    background-color: red;
+}
+#box5{
+    background-color: blue;
+}
+#box6{
+    background-color: rgb(150, 238, 18);
+}
+.three-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
 
  @media(min-width:768px){
     .hamburger-menu{
@@ -90,11 +237,25 @@ body{
         height: 10%;
         align-items: center;
         background-color: transparent;
+        box-shadow: 0.5px 0.1px #302a2a;
+        animation: animate 1s ease-in-out 2s  1 forwards;
+    }
+    @keyframes animate{
+        from{
+            opacity: 0;
+            transform: translate(0, 100px);
+            /* filter: blur(33px); */
+        }
+        to{
+            opacity: 1;
+            transform: translate(0);
+            /* filter: blur(0); */
+        }
     }
     .nav-bar ul{
         display: flex;
         flex-direction: row;
-        gap: 50px;
+        gap: 20px;
     }
     .nav-bar ul li{
         list-style-type: none;
@@ -102,13 +263,14 @@ body{
     .nav-bar ul li a{
         text-decoration: none;
         color: white;
-        font-size: 15px;
+        font-size: 10px;
     }
     .nav-bar ul li a:hover, .nav-bar ul li a:active{
         color: red;
     }
     .nav-bar h1{
-        font-size: 20px;
+        font-size: 15px;
+        letter-spacing: 2px;
         color: white;
     }
     .scrolled{
@@ -120,4 +282,38 @@ body{
     .scrolled ul li a{
         color: black;
     }
+    #home{
+        /* width: 100%; */
+        /* height: 100vh; */
+        justify-content: center;
+        font-size: 20px;
+    }
+    #home img{
+        width: 40vw;
+    }
+    #home .text h1{
+        font-size: 30px;
+        font-weight: 400;
+    }
+    #home .text h1 marquee{
+        font-size: 15px;
+        font-style: italic;
+        color: #767676;
+    }
+    #about{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #about img{
+        width: 30%;
+    }
+    #about .abt-text {
+        width: 30%;
+    }
+    .three-box{
+        flex-direction: row;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+   
  }
