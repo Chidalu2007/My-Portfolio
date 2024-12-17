@@ -171,14 +171,30 @@ body{
     padding-bottom: 90px;
 }
 
-a {
+ a {
     text-decoration: none;
-    color: white;
+    color: #302a2a;
     font-weight: 800;
     font-size: 30px;
+
 }
-a:hover{
-    color: black;
+ #box1 a:hover{
+    color: pink;
+}
+ #box2 a:hover{
+    color: cyan;
+}
+ #box3 a:hover{
+    color: rgb(30, 197, 239);
+}
+ #box4 a:hover{
+    color: red;
+}
+ #box5 a:hover{
+    color: blue;
+}
+ #box6 a:hover{
+    color: rgb(150, 238, 18);
 }
 #projects .project-links #box1,#box2,#box3,#box4,#box5,#box6{
     width: 320px;
@@ -197,20 +213,50 @@ a:hover{
 #box1{
     background-color: pink;
 }
+#box1:hover{
+    background-color: white;
+    border: 2px solid pink;
+    cursor: pointer;
+}
 #box2{
     background-color: cyan;
+}
+#box2:hover{
+    background-color: white;
+    border: 2px solid cyan;
+    cursor: pointer;
 }
 #box3{
     background-color: rgb(30, 197, 239);
 }
+#box3:hover{
+    background-color: white;
+    border: 2px solid rgb(30, 197, 239);
+    cursor: pointer;
+}
 #box4{
     background-color: red;
+}
+#box4:hover{
+    background-color: white;
+    border: 2px solid red;
+    cursor: pointer;
 }
 #box5{
     background-color: blue;
 }
+#box5:hover{
+    background-color: white;
+    border: 2px solid blue;
+    cursor: pointer;
+}
 #box6{
     background-color: rgb(150, 238, 18);
+}
+#box6:hover{
+    background-color: white;
+    border: 2px solid rgb(150, 238, 18);
+    cursor: pointer;
 }
 .three-box{
     display: flex;
@@ -220,6 +266,98 @@ a:hover{
     padding-bottom: 20px;
 }
 
+#skills{
+    padding: 90px 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+}
+#skills .des h2{
+    color: #000;
+    padding-bottom: 30px;
+}
+#skills .des{
+    width:100%;
+}
+#skills .records {
+width:100%
+}
+#skills .records div{
+    width: 100%;
+}
+.text-record{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap:100px;
+}
+.main-bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e6e5e5;
+    border: 1px solid black;
+}
+.main-bar #html-bar{
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e54b4b;
+    max-width: 85%;
+}
+.main-bar #css-bar{
+    height:10px;
+    border-radius: 10px;
+    background-color: #e54b4b;
+    max-width: 80%;
+}
+.main-bar #js-bar{
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e54b4b;
+    max-width: 50%;
+}
+.contact-link{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    background-color: #000;
+    width: 100%;
+    align-items: left;
+    height: 150px;
+    padding-left: 20px;
+
+}
+
+.contact-link p{
+color: white;
+text-align: left;
+font-size: 40px;
+line-height: 40px;
+padding-bottom: 30px;
+}
+.contact-link div{
+    display: flex;
+}
+#short-line{
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    flex-direction: row;
+    margin-top: 32px;
+}
+.contact-link a{
+    border-bottom: 2px solid rgba(208, 205, 205, 0.231);
+    width: fit-content;
+    color: white;
+    font-size: 15px;
+}
+.contact-link a:hover{
+    border-bottom: 2px solid white;
+}
 
  @media(min-width:768px){
     .hamburger-menu{
@@ -315,5 +453,41 @@ a:hover{
         gap: 20px;
         padding-bottom: 20px;
     }
+    #skills{
+        padding: 90px 0;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        flex-direction: row;
+        gap: 100px;
+        width: 100%;
+    }
+    #skills .des h2{
+        color: #000;
+        padding-bottom: 30px;
+    }
+    #skills .des{
+        width: 35%;
+    }
+    #skills .records {
+    width: 35%;
+    }
+    #skills .records div{
+        width: 100%;
+    }
+    .text-record{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 200px;
+    }
+    .contact-link{
+        flex-direction: row;
+        align-items: center;
+        gap: 400px;
+        padding-right: 20px;
+    }
+   
    
  }
